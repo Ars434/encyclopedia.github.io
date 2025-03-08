@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoPedia - Автомобильная энциклопедия</title>
-    <link rel="stylesheet" href="css/style.css"> <!-- Убедитесь, что путь правильный -->
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <nav class="nav">
             <a href="#" class="logo">AUTOPEDIA</a>
             <div class="nav-links">
-                <a href="#manufacturers" class="nav-link">Производители</a>
+                <div class="nav-item with-mega-menu">
+                    <a href="#manufacturers" class="nav-link">Производители</a>
+                    <div class="mega-menu">
+                        <div class="manufacturers-list"></div>
+                        <div class="manufacturer-detail" style="display: none;">
+                            <button class="back-button">← Назад</button>
+                            <div class="brand-content"></div>
+                        </div>
+                    </div>
+                </div>
                 <a href="#models" class="nav-link">Модели</a>
                 <a href="#tech" class="nav-link">Технологии</a>
             </div>
@@ -22,17 +34,17 @@
     <section class="hero">
         <div class="search-container">
             <h1>Автомобильная энциклопедия</h1>
-            <input type="text"
-                   class="search-input"
-                   placeholder="Найти автомобиль по марке, модели или характеристикам...">
+            <input type="text" class="search-input" placeholder="Найти автомобиль по марке, модели или характеристикам...">
         </div>
     </section>
 
     <main class="catalog-grid" id="catalog"></main>
 
+    <div class="pagination">
+        <div id="pageNumbers" class="page-numbers"></div>
+    </div>
+
     <script src="js/main.js"></script>
 </body>
 </html>
-
-
 
